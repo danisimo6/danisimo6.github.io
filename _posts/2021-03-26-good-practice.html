@@ -6,17 +6,17 @@ date: 2021-03-26 10:45:13 -0400
 background: '/img/posts/flock_thumb.jpg'
 ---
 
-<p>Over the years physicists started studying topics that were not traditionally considered to be a part of physics, but that could be described in terms
-  with theories similar to the ones developed in physics. Swarms of insects, crowds of people, flocks of birds and many other systems seemed to be well 
+<p>Over the years, physicists started studying topics that were not traditionally considered to be a part of physics, but that could be described
+  with theories similar to the ones developed in this science. Swarms of insects, crowds of people, flocks of birds and many other systems seemed to be well 
   suited to be studied with the language of thermodynamics. Why are all these seemingly completely different systems, so similar to this branch of
   physics that we study in high school?
   <br>
-  The core idea is that, in all these cases, we sort of know the the rules followed by the single constituents 
-  of the system but there are too many of them to follow them simultaneously. For examle, in an ideal gas we know how the single atoms behave: they scatter 
+  The core idea is that, in all these cases, we sort of know the rules followed by the single constituents 
+  of the system but there are too many of them to follow them simultaneously. For example, in an ideal gas we know how the single atoms behave: they scatter 
   elastically with the container's walls. But since we have a huge amount of them, we cannot describe 
   the gas by following each atom's trajectory and we study the system by defining average global properties, like temperature and pressure, that can still 
-  be derived from the the single constituents. To see it, we'll introduce a topic studied by the 2021 Nobel prize laureate Giorgio Parisi who studied 
-  quantitatively bird flocks, in a similar manner to how he described magnetic systems, in order to describe where their ordered behaviour comes from. 
+  be derived from the laws behind single constituents' motion. To see it, we'll introduce a topic studied by the 2021 Nobel prize laureate Giorgio Parisi, who analyzed 
+  quantitatively bird flocks, in a similar manner to how he described magnetic systems, in order to understand where their ordered behaviour comes from. 
   Of course Parisi used a lot of mathematics, but if you remember the head-tail technique for vector summation you can learn some interesting stuff. 
 </p>
 
@@ -26,10 +26,10 @@ background: '/img/posts/flock_thumb.jpg'
     a sphere, but this is not far from the truth. 
     In our description a bird is just a triangle wandering in a 2-dimensional world togheter with its mates and carachterized by a certain velocity vector.
     In our analysis each bird will have the same velocity in magnitude of 1 m/s but different orientations, since this quantity is vectorial. 
-    To understand how ordered flocks emerge from the behaviour of single birds we first need to quantify the amount of order in our flock.
+    To understand how ordered flocks emerge from the behaviour of single birds, we first need to quantify the amount of order in our flock.
     We introduce the so called order parameter, that we represent with the greek letter ϕ and calculate using the following procedure: 
     <ul>
-      <li> we sum using the head-tail technique all the birds velocities vectors
+      <li> we sum using the head-tail technique all the birds' velocity vectors
       <li> we divide the resulting vector length by the number of birds in our system
       <li> the order parameter is this final vector length measured in m/s
     </ul>  
@@ -37,9 +37,9 @@ background: '/img/posts/flock_thumb.jpg'
     the order parameter would be slightly more complicated in order to be in the range between 0 and 1, but we'll stick to the first case for simplicity.
     Now let's see how this quantity gives us information about the amount of order in our group of birds using two examples. 
     <br>
-    In the one depicted in Fig.1, we see twenty birds flying in parallel and if we try to calculate the order parameter using the rules explained before
+    In the one depicted in Fig.1, we see twenty birds flying in parallel and if we try to calculate the order parameter using the rules explained before,
     we get ϕ = 1. Indeed, if we sum all their velocity vectors, with magnitude 1 m/s, we get a total vector of magnitude 20 m/s that we need to divide 
-    by twenty, the number of birds, and get rid of the m/s units to get ϕ = 1. This is in agreement with our intuition of an ordered flock: the birds fly
+    by twenty, the number of birds, and get rid of the m/s units to obtain the ϕ = 1 result. This is in agreement with our intuition of an ordered flock: the birds fly
     along the same direction. 
 </p>
 
@@ -49,7 +49,7 @@ background: '/img/posts/flock_thumb.jpg'
 <p>                                                            </p>
 In Fig.2, we see what we expect to be a disordered bird system. If we try to calculate ϕ we obtain a zero value because they are all pointing in
 different directions. In the head-tail part of the order parameter calculation, each bird has a mate with a velocity equal in magnitude but opposite 
-direction so they cancel each other and ϕ = 0. 
+direction so that they cancel each other, the final vector has zero magnitude and ϕ = 0. 
 <image src="/img/unpol.gif" alt="Spinners" height ="450" width="800" /> 
 
 <span class="caption text-muted"> Fig.2 A disordered flock with ϕ = 0.</span>
@@ -57,13 +57,15 @@ direction so they cancel each other and ϕ = 0.
 
 <h2 class="section-heading">Ordered flocks appear</h2>
 Flocks of course are not inherently disordered neither ordered, as birds take off from a tree branches they go from the first to the second condition.
-How do they do it? We need to add an interaction between birds and this is the moment in which interdisciplinarity comes into play: when research 
-groups tackles 
-these kind of problems the analytical skills brought by mathematicians or physicists need to be helped by the knowledge of people already expert 
-in the field, ornithologists or biologists in this case. Already before Parisi's work, people in this fields already knew the basic rules behind 
+How do they do it?
+<br>
+We need to add an interaction between birds and this is the moment in which interdisciplinarity comes into play: when research 
+groups tackle
+these kind of problems, the analytical skills brought by mathematicians or physicists need to be helped by the knowledge of people already expert 
+in the field, like ornithologists or biologists in this case. Already before Parisi's work, people in this fields already knew the basic rules behind 
 flocks: birds can fly in parallel
 only with the nearest mates in the flying group because they can't see all the birds in the flock, but it turns out that this is sufficient to give
-rise to the global ordered behaviour. Let's build a simple model, not to dissimilar to the one developed by Parisi, starting from our triangular birds.
+rise to the global ordered behaviour. Let's build a simple model, not to dissimilar to the one developed by Parisi, for our triangular birds.
 <br>
 The rules are displayed in Fig.3 and Fig.4 : at each time instant the white bird in figure scans a circular area, since as we learn from ornithologists
 its sight range is finite, and sums with the head-tail technique the birds' velocities that are inside. In Fig.3, he can only see the red and the blue
@@ -71,14 +73,14 @@ bird while he neglects the green one, so he gets as resulting vector the orange 
 
 <image src="/img/first_rule.png" alt="Spinners" height ="450" width="800" /> 
 
-<span class="caption text-muted"> Fig.3 The white bird observes its neighbours, the red and the blue bird.</span>
+<span class="caption text-muted"> Fig.3 The white bird observes its neighbours, the red and the blue bird, and sums their velocities to get the orange one.</span>
 <p>                                                            </p>
 <p>                                                            
 Then, in Fig.4 you can see the second step of our interaction rule: the resulting orange vector is rescaled so that its magnitude is still of 1 m/s
 (remember that we choose for simplicity that all birds always keep a speed of 1 m/s). At the next time instant, the white bird will move in the orange 
 direction that is more parallel to the other birds velocities with respect to the old black arrowed velocity. Our flock will get more and more
 ordered as the other birds will apply the interaction rules too. Note that even if the white and green bird don't see each other, sooner or later 
-they will fly in a parallel manner since they both see the blue one and this is a typical phenomenon in physics too, as we'll see later. 
+they will fly in a parallel manner since they both see the blue one.
 </p>
 
 <image src="/img/second_rule.png" alt="Spinners" height ="450" width="800" /> 
@@ -87,7 +89,7 @@ they will fly in a parallel manner since they both see the blue one and this is 
 <p>                                                            </p>
 
 <p>
-In Fig.5 you cann see a simulation of the 2-dim. birds implemeting the interaction rules: the birds start in the Fig.4 disordered configuration and 
+In Fig.5 you cann see a simulation of the 2-dim. birds implemeting the interaction rules: the birds start in the Fig.2 disordered configuration and 
 quickly undergo what in thermodynamics is called a phase transition, getting into an ordered condition.
 </p>  
 
@@ -99,10 +101,10 @@ quickly undergo what in thermodynamics is called a phase transition, getting int
 <h2 class="section-heading">Magnetic systems</h2>
 <p>
 Now we want to study how magnetism arises in material starting from a simple model in analogy with the flocks model that we 
-developed before. A typical solid material is composed by atoms arranged into an ordered structure called lattice and that determines many of its properties.
+developed before. A typical solid material is composed by atoms arranged into an ordered structure called lattice that determines many of its properties.
 <br>
 The system can be magnetic because the single atoms can be thought as little magnets with a north and a south pole, like the ones
-that you stick to your fridge, and they are characterized by a vector quantity called magnetic dipole moment or spins. This is a vector with the north-south
+that you stick to your fridge, and they are characterized by a vector quantity called magnetic dipole moment or spin. This is a vector with the north-south
 magnet direction as orientation and a magnitude that tells us how much magnetic it is.
 Even if a material is made of magnetic atoms, it is magnetic itself only if all the dipole moments in our lattice, a 2-dimensional square lattice 
 for simplicity, are parallel to each other like in Fig.6, thanks to their particular interaction that we won't describe
@@ -114,12 +116,12 @@ in detail. You can use the order parameters rules that we introduced for birds a
 <span class="caption text-muted">  Fig.6 A 2-dimensional magnetic system at a temperature above Curie's one has maximum magnetization.</span>
 <p>   </p>
 <p>   
-Of course the system depicted in Fig.6 is perfectly ordered and the order parameter, usually called magnetization, is ϕ = 1. But materials made of
-magnetic atoms, with a non-zero spins,
+Of course the system depicted in Fig.6 is perfectly ordered and the order parameter, usually called magnetization, is ϕ = 1. But, as we said before,
+materials made of magnetic atoms, with a non-zero spins,
 are not always magnetic: if we overcome a certain temperature called Curie temperature spins start having
 oscillation around their pivot point in the lattice and the magnetization is zero.
 <br>
-Fig.7 depicts this situation: the dipole moments point at 
+Fig.7 depicts this situation: the spins point at 
 random direction so you get a zero length vector when you sum all them up. The Curie temperrature depends on the atoms properties and the lattice on
 which they are positioned and it is called the system critical temperature: as we move from above it to a lower temperature we go from a disordered
 system to an ordered one getting a phase transition.
@@ -132,8 +134,10 @@ system to an ordered one getting a phase transition.
 <p>   
 A system like this, in which below a certain temperature all the spins are parallel to each other, is called a ferromagnetic material.
 There are a lot of different classifications of materials depending on their magnetic properties 
-like antiferromagnetic, ferrimagnetic and spin glasses materials. The studying of the latter
-was one of the reason thanks to which Parisi won the 2021 Nobel prize but a detailed explanation of their propertiesis beyond the scope
+like antiferromagnetic, ferrimagnetic and spin glasses materials. 
+<br>
+The studying of the latter
+was one of the reason thanks to which Parisi won the 2021 Nobel prize but a detailed explanation of their properties is beyond the scope
 of this article. It is sufficient to say that on analogous way to the glass composing our house windows, spins are always orientated in 
 seemingly random directions but if we look clodely there is a critical temperature below which the system is "less" disordered
 
